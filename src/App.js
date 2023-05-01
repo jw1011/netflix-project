@@ -1,9 +1,11 @@
 //import logo from "./logo.svg";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import MovieDetail from "./pages/MovieDetail";
+import Navigation from "./components/Navigation";
 
 //1.홈페이지, movie 페이지, movieDetail페이지
 //2. 홈페이지 : 배너를 볼 수 있다
@@ -23,6 +25,7 @@ import MovieDetail from "./pages/MovieDetail";
 function App() {
   return (
     <div>
+      <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
